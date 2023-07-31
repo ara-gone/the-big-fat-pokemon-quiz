@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
 body {
   font-family: 'Times New Roman', Times, sans-serif;
-  background: #fcfcfc;
+  background: #f8f0f0;
   display: flex;
   justify-content: center;
 }
@@ -35,16 +34,18 @@ h1 {
 }
 
 .button {
-  display: inline-block;
-  padding: 10px 20px;
+  display: block;
+  text-align: center;
+  padding: 5px 8px;
   background-color: none;
-  color: #fff;
+  color: #000000;
   border: outset;
-  cursor: pointer;
+  cursor: url(assets/sprites/Poké_Ball_summary_IV.png), auto;
   font-size: 16px;
-  border-radius: 4px;
+  border-radius: px;
   transition: background-color 0.3s;
-  margin-right: 10px;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .button:hover {
