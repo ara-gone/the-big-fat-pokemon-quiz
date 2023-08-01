@@ -4,9 +4,53 @@ body {
   background: #f8f0f0;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
+.animation {
+    --s: 25vh;
+    --rpos: calc(0);
+    --p: calc(var(--s) / 2);
+    --d: 15000ms;
+    --e: cubic-bezier(0.76, 0, 0.24, 1);
+    /* --m: `String text ${expression}`; */
+
+    position: absolute;
+
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) );
+
+    background-repeat: no-repeat;
+    background-image: 
+    url(assets/sprites/icons/1.png),
+    url(assets/sprites/icons/4.png),
+    url(assets/sprites/icons/7.png),
+    url(assets/sprites/icons/25.png)
+    ;
+    height: 100%;
+    width: 100%;
+    /* background-image: url("assets/sprites/icons/1.png"), repeat 0; */
+    /* background-position: calc(var(--p) *  1) calc(var(--p) *  0); */
+    background-size: 150px, 150px, 150px, 150px;
+    background-position: 
+    left -75px,
+    center -10px,
+    right -50px,
+    75% -20px;
+
+    animation-name: pos;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    overflow: hidden;
+}
+
+@keyframes pos {
+    0%   {top:calc(0% + (-100px));}
+    100% {top:calc(100% + (100px));}
+  }
+
 .container {
+  position: relative;
+  overflow: hidden;
   width: 450px;
   padding: 20px;
   margin-top: 80px;
@@ -61,3 +105,9 @@ h1 {
 .hide{
   display: none;
 }
+
+@media (prefers-reduced-motion) {
+    body {
+      animation: none;
+    }
+  }
