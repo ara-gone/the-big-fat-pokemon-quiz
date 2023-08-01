@@ -12,19 +12,19 @@ body {
     /* background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ); */
     background-repeat: no-repeat;
     background-image: url(assets/sprites/icons/1.png);
-    height: 100%;
+    height: calc(100%);
     width: 100%;
     background-size: 150px;
     background-position: left 0px;
 
     animation-name: pos;
-    animation-duration: 10s;
+    animation-duration: 15s;
     animation-iteration-count: infinite;
     overflow: hidden;
 }
 
 @keyframes pos {
-    0%   {top:calc(0% + (-100px));}
+    0%   {top:calc(0% + (-170px));}
     /* 25%   {transform: rotate(0.8turn);} */
     100% {top:calc(100% + (100px));}
   }

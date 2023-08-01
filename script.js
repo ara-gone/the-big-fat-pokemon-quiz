@@ -57,7 +57,6 @@ loopFunction(15000,
     function() {
         
         url_base = "url(\"assets/sprites/icons/";
-        new_url = "url(\"assets/sprites/icons/" + dexCounter + ".png\")";
         dexCounter++;
         if (dexCounter >= 1000) {
             dexCounter = 0;
