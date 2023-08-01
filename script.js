@@ -1,7 +1,13 @@
 const quizContainer = document.getElementById('quiz');
+const animationContainer = document.getElementById('animation');
 const titleContainer = document.getElementById('title');
 const startButton = document.getElementById('start');
 // const resetButton = document.getElementById('reset');
+
+let dexCounter = 0;
+
+// TODO: Make FOUR .animation divs instead of just one!
+//       The positions and image can all be individually controlled in this script
 
 // resetButton.addEventListener('click', resetPage);
 startButton.addEventListener('click', displayQuestion);
@@ -30,3 +36,36 @@ function resetPage() {
     titleContainer.style.display = 'block';
     startButton.style.display = 'block';
 }
+
+function loopFunction(delay, callback){
+    var loop = function(){
+        callback();
+        setTimeout(loop, delay);
+    }; loop();
+};
+
+function setup(){
+    animations = document.getElementsByClassName("animation");
+    for (let anim of animations) {
+        anim.style.backgroundImage = url_base + (Math.floor(Math.random() * 100)) + ".png\"";
+    }
+}
+
+loopFunction(10000, 
+    function() {
+        
+        url_base = "url(\"assets/sprites/icons/";
+        new_url = "url(\"assets/sprites/icons/" + dexCounter + ".png\")";
+        dexCounter++;
+        if (dexCounter >= 1000) {
+            dexCounter = 0;
+        }
+
+        animations = document.getElementsByClassName("animation");
+
+        for (let anim of animations) {
+            anim.style.backgroundImage = url_base + (Math.floor(Math.random() * 100)) + ".png\"";
+        }
+    });
+
+setup();
