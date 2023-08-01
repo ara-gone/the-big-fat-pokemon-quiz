@@ -1,3 +1,5 @@
+const MAX_DEX_NUMBER = 1000;
+
 const quizContainer = document.getElementById('quiz');
 const animationContainer = document.getElementById('animation');
 const titleContainer = document.getElementById('title');
@@ -51,7 +53,7 @@ function setup(){
     }
 }
 
-loopFunction(10000, 
+loopFunction(15000, 
     function() {
         
         url_base = "url(\"assets/sprites/icons/";
@@ -64,7 +66,7 @@ loopFunction(10000,
         animations = document.getElementsByClassName("animation");
 
         for (let anim of animations) {
-            anim.style.backgroundImage = url_base + (Math.floor(Math.random() * 100)) + ".png\"";
+            anim.style.backgroundImage = url_base + (Math.floor(Math.random() * MAX_DEX_NUMBER)) + ".png\"";
         }
     });
 
