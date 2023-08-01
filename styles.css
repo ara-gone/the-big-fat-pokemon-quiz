@@ -18,7 +18,7 @@ body {
     background-position: left 0px;
 
     animation-name: pos;
-    animation-duration: 15s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
     overflow: hidden;
 }
