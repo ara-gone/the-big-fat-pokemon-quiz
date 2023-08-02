@@ -1,4 +1,4 @@
-const MAX_DEX_NUMBER = 1000;
+const MAX_DEX_NUMBER = 898;
 
 const quizContainer = document.getElementById('quiz');
 const animationContainer = document.getElementById('animation');
@@ -7,20 +7,18 @@ const startButton = document.getElementById('start');
 // const resetButton = document.getElementById('reset');
 
 let dexCounter = 0;
-
-// TODO: Make FOUR .animation divs instead of just one!
-//       The positions and image can all be individually controlled in this script
+let questions = null;
 
 // resetButton.addEventListener('click', resetPage);
 startButton.addEventListener('click', displayQuestion);
 
 function displayQuestion() {
+
     titleContainer.style.display = 'none';
     startButton.style.display = 'none';
 
     const questionElement = document.createElement('div');
     questionElement.className = 'button';
-    // g.setAttribute("id", "Div1");
     questionElement.innerHTML = 'this will be a question soon :)';
     
     // resetButton = document.createElement('div');
@@ -49,11 +47,29 @@ function loopFunction(delay, callback){
 function setup(){
     animations = document.getElementsByClassName("animation");
     for (let anim of animations) {
-        anim.style.backgroundImage = url_base + (Math.floor(Math.random() * 100)) + ".png\"";
+        anim.style.backgroundImage = url_base + (Math.floor(Math.random() * 100) + 1) + ".png\"";
     }
+
+    $.get("questions.csv", function(questions) {
+        //  console.log(questions);
+         data = $.csv.toObjects(questions);
+         console.log(data);
+    });
+
+    // questions = $.csv.toArray('questions.csv');
+    // console.log(questions);
 }
 
-loopFunction(15000, 
+// $(document).ready(function() {
+//     $.ajax({
+//         type: "GET",
+//         url: "data.txt",
+//         dataType: "text",
+//         success: function(data) {processData(data);}
+//      });
+// });
+
+loopFunction(10000, 
     function() {
         
         url_base = "url(\"assets/sprites/icons/";
