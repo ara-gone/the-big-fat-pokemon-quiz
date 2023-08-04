@@ -53,6 +53,7 @@ function displayQuestion() {
             const radio = document.createElement('input');
             radio.type = 'radio';
             radio.name = 'quiz';
+            // radio.value = data[question_id].answer.value;
             radio.value = option;
 
             // Bad variable name!
@@ -99,19 +100,19 @@ function setup(){
     // console.log(questions);
 }
 
-loopFunction(10000, 
+loopFunction(20000, 
     function() {
         
-        url_base = "url(\"assets/sprites/icons/";
+        url_base = "assets/sprites/icons/";
         dexCounter++;
         if (dexCounter >= 1000) {
             dexCounter = 0;
         }
 
-        animations = document.getElementsByClassName("animation");
+        animations = document.getElementsByClassName("sprites");
 
         for (let anim of animations) {
-            anim.style.backgroundImage = url_base + (Math.floor(Math.random() * MAX_DEX_NUMBER) + 1) + ".png\"";
+            anim.src = url_base + (Math.floor(Math.random() * MAX_DEX_NUMBER) + 1) + ".png";
         }
     });
 
