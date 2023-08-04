@@ -111,7 +111,7 @@ loopFunction(10000,
         animations = document.getElementsByClassName("animation");
 
         for (let anim of animations) {
-            anim.style.backgroundImage = url_base + (Math.floor(Math.random() * MAX_DEX_NUMBER)) + ".png\"";
+            anim.style.backgroundImage = url_base + (Math.floor(Math.random() * MAX_DEX_NUMBER) + 1) + ".png\"";
         }
     });
 
