@@ -1,4 +1,5 @@
 const MAX_DEX_NUMBER = 898;
+const MAX_QUESTION_OPTIONS = 4;
 
 const quizContainer = document.getElementById('quiz');
 const animationContainer = document.getElementById('animation');
@@ -7,7 +8,7 @@ const startButton = document.getElementById('start');
 // const resetButton = document.getElementById('reset');
 
 let dexCounter = 0;
-let questions = null;
+let data = null;
 
 // resetButton.addEventListener('click', resetPage);
 startButton.addEventListener('click', displayQuestion);
@@ -18,16 +19,54 @@ function displayQuestion() {
     startButton.style.display = 'none';
 
     const questionElement = document.createElement('div');
-    questionElement.className = 'button';
-    questionElement.innerHTML = 'this will be a question soon :)';
-    
-    // resetButton = document.createElement('div');
-    // resetButton.className = 'button';
-    // resetButton.setAttribute("id", "reset");
-    // resetButton.innerHTML = 'this will be a question soon :)';
+    questionElement.className = 'question';
+    question_id = Math.floor(Math.random() * data.length);
+    questionElement.innerHTML = data[question_id].question;
 
+    const optionsElement = document.createElement('div');
+    optionsElement.className = 'options';
+
+    console.log(data);
+    for (let i = 0; i < MAX_QUESTION_OPTIONS; i++) {
+        optionText = null;
+        switch(i){
+            case 0:
+                optionText = data[question_id].answer_1;
+                break;
+            case 1:
+                optionText = data[question_id].answer_2;
+                break;
+            case 2:
+                optionText = data[question_id].answer_3;
+                break;
+            case 3:
+                optionText = data[question_id].answer_4;
+                break;
+            default:
+            break;
+        }
+
+        if (optionText != "" && optionText != null) {
+            const option = document.createElement('label');
+            option.className = 'option';
+        
+            const radio = document.createElement('input');
+            radio.type = 'radio';
+            radio.name = 'quiz';
+            radio.value = option;
+
+            // Bad variable name!
+            const text = document.createTextNode(optionText);
+
+            option.appendChild(radio);
+            option.appendChild(text);
+            optionsElement.appendChild(option);
+        }
+    }
+    
     quizContainer.innerHTML = '';
     quizContainer.appendChild(questionElement);
+    quizContainer.appendChild(optionsElement);
 }
 
 function resetPage() {
@@ -59,15 +98,6 @@ function setup(){
     // questions = $.csv.toArray('questions.csv');
     // console.log(questions);
 }
-
-// $(document).ready(function() {
-//     $.ajax({
-//         type: "GET",
-//         url: "data.txt",
-//         dataType: "text",
-//         success: function(data) {processData(data);}
-//      });
-// });
 
 loopFunction(10000, 
     function() {

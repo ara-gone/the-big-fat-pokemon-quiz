@@ -73,6 +73,20 @@ h1 {
   margin: 0 auto;
 }
 
+.question {
+  display: block;
+  text-align: center;
+  padding: 5px 8px;
+  background-color: none;
+  color: #000000;
+  border: outset;
+  font-size: 16px;
+  border-radius: px;
+  transition: background-color 0.3s;
+  justify-content: center;
+  margin: 0 auto;
+}
+
 .button:hover {
   background-color: #cce3f7;
 }
@@ -81,6 +95,15 @@ h1 {
   text-align: center;
   margin-top: 15px;
   font-weight: bold;
+}
+
+.options {
+  margin-bottom: 20px;
+}
+
+.option {
+  display: block;
+  margin-bottom: 10px;
 }
 
 .hide{
