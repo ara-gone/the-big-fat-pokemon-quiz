@@ -90,14 +90,10 @@ function setup(){
         anim.style.backgroundImage = url_base + (Math.floor(Math.random() * 100) + 1) + ".png\"";
     }
 
-    $.get("questions.csv", function(questions) {
-        //  console.log(questions);
+    $.get("data/questions.csv", function(questions) {
          data = $.csv.toObjects(questions);
          console.log(data);
     });
-
-    // questions = $.csv.toArray('questions.csv');
-    // console.log(questions);
 }
 
 loopFunction(20000, 
