@@ -5,6 +5,7 @@ const MAX_QUIZ_LENGTH = 10;
 const quizContainer = document.getElementById('quiz');
 const animationContainer = document.getElementById('animation');
 const titleContainer = document.getElementById('title');
+const submitButton = document.getElementById('submit');
 const startButton = document.getElementById('start');
 // const resetButton = document.getElementById('reset');
 
@@ -44,9 +45,17 @@ let userScore = {
 
 // resetButton.addEventListener('click', resetPage);
 startButton.addEventListener('click', setupQuiz);
+//nextButton.addEventListener('click', submitAnswer);
+
+function showResult() {
+
+}
 
 function setupQuiz() {
     // sortQuestions(chosenQuizLength);
+    titleContainer.style.display = 'none';
+    startButton.style.display = 'none';
+
     sortQuestions();
     console.log(questions);
     displayQuestion();
@@ -63,32 +72,28 @@ function sortQuestions() {
 
 function displayQuestion() {
 
-    titleContainer.style.display = 'none';
-    startButton.style.display = 'none';
-
+    console.log(questions[currentQuestion]);
     const questionElement = document.createElement('div');
     questionElement.className = 'question';
-    let question_id = Math.floor(Math.random() * data.length);
-    questionElement.innerHTML = data[question_id].question;
+    questionElement.innerHTML = questions[currentQuestion].question;
 
     const optionsElement = document.createElement('div');
     optionsElement.className = 'options';
 
-    console.log(data);
     for (let i = 0; i < MAX_QUESTION_OPTIONS; i++) {
         optionText = null;
         switch(i){
             case 0:
-                optionText = data[question_id].answer_1;
+                optionText = questions[currentQuestion].answer_1;
                 break;
             case 1:
-                optionText = data[question_id].answer_2;
+                optionText = questions[currentQuestion].answer_2;
                 break;
             case 2:
-                optionText = data[question_id].answer_3;
+                optionText = questions[currentQuestion].answer_3;
                 break;
             case 3:
-                optionText = data[question_id].answer_4;
+                optionText = questions[currentQuestion].answer_4;
                 break;
             default:
             break;
@@ -101,7 +106,6 @@ function displayQuestion() {
             const radio = document.createElement('input');
             radio.type = 'radio';
             radio.name = 'quiz';
-            // radio.value = data[question_id].answer.value;
             radio.value = option;
 
             // Bad variable name!
@@ -116,11 +120,13 @@ function displayQuestion() {
     quizContainer.innerHTML = '';
     quizContainer.appendChild(questionElement);
     quizContainer.appendChild(optionsElement);
+
+    submitButton.style.display = 'inline-block';
+    // quizContainer.appendChild(submitButton);
 }
 
 function resetPage() {
     quizContainer.style.display = 'none';
-
     titleContainer.style.display = 'block';
     startButton.style.display = 'block';
 }
