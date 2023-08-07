@@ -40,15 +40,24 @@ let userScore = {
     Hasty:0,
     Jolly:0,
     Naive:0,
-    Serious:0
+    Serious:0,
+    Bug:0,Dark:0,Dragon:0,Electric:0,Fairy:0,Fighting:0,
+    Fire:0,Flying:0,Ghost:0,Grass:0,Ground:0,Ice:0,
+    Normal:0,Poison:0,Psychic:0,Rock:0,Steel:0,Water:0
 };
 
 // resetButton.addEventListener('click', resetPage);
 startButton.addEventListener('click', setupQuiz);
-//nextButton.addEventListener('click', submitAnswer);
+submitButton.addEventListener('click', submitAnswer);
 
-function showResult() {
+function submitAnswer() {
+    const selectedOption = document.querySelector('input[name="quiz"]:checked');
+    console.log(selectedOption);
 
+    if (selectedOption) {
+        const result = selectedOption.value;
+        console.log(result);
+    }
 }
 
 function setupQuiz() {
@@ -82,18 +91,23 @@ function displayQuestion() {
 
     for (let i = 0; i < MAX_QUESTION_OPTIONS; i++) {
         optionText = null;
+        natureValue = null;
         switch(i){
             case 0:
                 optionText = questions[currentQuestion].answer_1;
+                natureValue = questions[currentQuestion].result_1;
                 break;
             case 1:
                 optionText = questions[currentQuestion].answer_2;
+                natureValue = questions[currentQuestion].result_2;
                 break;
             case 2:
                 optionText = questions[currentQuestion].answer_3;
+                natureValue = questions[currentQuestion].result_3;
                 break;
             case 3:
                 optionText = questions[currentQuestion].answer_4;
+                natureValue = questions[currentQuestion].result_4;
                 break;
             default:
             break;
@@ -106,7 +120,7 @@ function displayQuestion() {
             const radio = document.createElement('input');
             radio.type = 'radio';
             radio.name = 'quiz';
-            radio.value = option;
+            radio.value = natureValue;
 
             // Bad variable name!
             const text = document.createTextNode(optionText);
