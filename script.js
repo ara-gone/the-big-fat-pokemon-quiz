@@ -50,13 +50,31 @@ let userScore = {
 startButton.addEventListener('click', setupQuiz);
 submitButton.addEventListener('click', submitAnswer);
 
+function showResult() {
+    quizContainer.innerHTML = '';
+    submitButton.style.display = 'none';
+    const div = document.createElement("div");
+    div.style.width = "100px";
+    div.style.height = "100px";
+    div.innerHTML = JSON.stringify(userScore);
+    quizContainer.appendChild(div);
+}
+
 function submitAnswer() {
     const selectedOption = document.querySelector('input[name="quiz"]:checked');
     console.log(selectedOption);
 
     if (selectedOption) {
         const result = selectedOption.value;
-        console.log(result);
+        userScore[result]++;
+        currentQuestion++;
+
+        if (currentQuestion < questions.length) {
+            displayQuestion();
+        }
+        else {
+            showResult();
+        }
     }
 }
 
@@ -136,7 +154,6 @@ function displayQuestion() {
     quizContainer.appendChild(optionsElement);
 
     submitButton.style.display = 'inline-block';
-    // quizContainer.appendChild(submitButton);
 }
 
 function resetPage() {
@@ -153,11 +170,7 @@ function loopFunction(delay, callback){
 };
 
 function setup(){
-    // animations = document.getElementsByClassName("animation");
-    // for (let anim of animations) {
-    //     anim.style.backgroundImage = url_base + (Math.floor(Math.random() * 100) + 1) + ".png\"";
-    // }
-
+    // TODO: create multiple flying mons?
     let img = document.createElement('img');
     img.src = 'assets/sprites/icons/1.png';
     img.class = 'sprites';
