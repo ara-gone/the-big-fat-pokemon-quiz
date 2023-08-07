@@ -3,7 +3,7 @@ You decide to go on a road trip. Where are you headed?,personality,"A golden, su
 What's in your pockets right now?,personality,Nothing!,I don't have pockets?,A used tissue and ...one piece of gum.,"My phone, wallet, earphones, and a pen!",Relaxed,Lax,Hasty,Careful
 "Have you ever thought that if you dug into your backyard, you would find a buried treasure?",personality,Yes.,No.,,,Naive,Serious,,
 You open a buried treasure chest... what does it contain?,personality,"Gold, and lots of it!",A memory from a lost time.,Skulls and bones! Muahahaha!,A magical sword of destruction!,Sassy,Gentle,Impish,Brave
-You have a really important test tomorrow! What do you do?,personality,Study. All. Night. Long,Wingin' it!,Test? I think I have a fever...,,Adamant,Bold,,
+You have a really important test tomorrow! What do you do?,personality,Study. All. Night. Long,Wingin' it!,Test? I think I have a fever...,,Adamant,Bold,Quirky,
 What's your studying habit?,personality,"Work hard, everyday.",I guess when I feel like it?,"In a group, with my besties!",Don't need to study.,Careful,Mild,Jolly,Rash
 You see a cake that's past it's expiration date... but only by 1 day. What do you do?,personality,Chow time!,I need a closer look.,Make someone else try it first.,Gross!,Brave,Careful,Quirky,Timid
 Everyone around you is laughing at something you think is pretty boring. What do you do?,personality,"Nothing, really.",Laugh along.,Depends on the situation.,,Relaxed,Bashful,Calm,
@@ -22,15 +22,15 @@ You're at a movie theater. What are you there to see?,taste,An action movie.,Rom
 You're hiking up a mountain when you reach diverging paths. Where do you go?,personality,The narrow path.,The wide path.,The shadowy gap in the trees.,Jump in the river!,Quiet,Docile,Brave,Quirky
 Your friend takes a spectacular fall! What do you do first?,personality,Laugh! Just a little bit!,Help them up!,Fall with them!,I tripped them up!,Naive,Modest,Jolly,Impish
 Which of these places is the most peaceful to you?,personality,Library.,Beach.,My room.,My grandma's house.,Quiet,Relaxed,Lonely,Modest
-"How well did you wash your hands, the last time you went?",personality,"Wet hands, soap, wash thoroughly for a minute...",Wet my hands and go.,Didn't bother.,,,,,
-Does the deep ocean scare you?,taste,It's beautiful.,Yeah! It's so empty!,Find me the Titanic!,,,,,
-Do you spend a lot of time shopping for clothes?,taste,Too much time.,Not at all.,Just get what I need.,,,,,
-Your friend is running late. Is that OK?,personality,It's fine!,No!,,,,,,
-Do you believe in zodiac signs?,taste,Yes!,No!,,,,,,
-Did you believe in Santa as a child?,personality,Not for one second!,I was fooled a little bit!,"Wait, he's not real?!",,,,,
-You're a medieval adventurer. Which party member are you?,taste,An old and wise wizard.,The great hero!,A brutal berserker.,The reliable healer.,,,,
-Do you keep a lot of pets?,taste,Yes! I love them!,Just the one.,No - but I'd like one someday.,It's not for me.,,,,
-A crazy masked assassin is chasing you down! What now?,personality,Drop down & play dead!,Hide!,Hide... and fight!,Can we just talk for a moment?,,,,
-You want to reveal you like someone a whole bunch. How do you do it?,personality,Show it by subtly flirting.,Play a prank on them!,State it clearly for all to hear!,Keep it to myself! It's too risky!,,,,
+"How well did you wash your hands, the last time you went?",personality,"Wet hands, soap, wash thoroughly for a minute...",Wet my hands and go.,Didn't bother.,,Careful,Bold,Impish,
+Does the deep ocean scare you?,taste,It's beautiful.,Yeah! It's so empty!,Let's go find the Titanic!,,Water,Fire,Dark,
+Do you spend a lot of time shopping for clothes?,taste,Too much time.,Not at all.,Just get what I need.,,Fairy,Dragon,Normal,
+Your friend is running late. Is that OK?,personality,It's fine!,No!,,,Relaxed,Serious,,
+Do you believe in zodiac signs?,personality,Yes!,No!,,,Sassy,Hardy,,
+Did you believe in Santa as a child?,personality,Not for one second!,I was fooled a little bit!,"Wait, he's not real?!",,Adamant,Calm,Naive,
+You're a medieval adventurer. Which party member are you?,taste,An old and wise wizard.,The great hero!,A brutal berserker.,The reliable healer.,Dragon,Steel,Fire,Normal
+Do you keep a lot of pets?,taste,Yes! I love them!,Just the one.,No - but I'd like one someday.,It's not for me.,Electric,Normal,Normal,Steel
+A crazy masked assassin is chasing you down! What now?,personality,Drop down & play dead!,Hide!,Hide... and fight!,Can we just talk for a moment?,Timid,Careful,Brave,Quirky
+You want to reveal you like someone a whole bunch. How do you do it?,personality,Show it by subtly flirting.,Play a prank on them!,State it clearly for all to hear!,Keep it to myself! It's too risky!,Brave,Impish,Naughty,Lonely
 What book are you reading next?,taste,A great classic.,A fantasy.,Something I can learn from!,Don't want to read!,Ghost,Fairy,Psychic,Fighting
 What type of music did you last listen to?,taste,Pop from another country!,Classical music.,Something chill.,A sad song.,Electric,Psychic,Water,Ice
