@@ -1,6 +1,6 @@
 const MAX_DEX_NUMBER = 898;
 const MAX_QUESTION_OPTIONS = 4;
-const MAX_QUIZ_LENGTH = 10;
+const MAX_QUIZ_LENGTH = 20;
 
 const quizContainer = document.getElementById('quiz');
 const animationContainer = document.getElementById('animation');
@@ -84,17 +84,29 @@ function setupQuiz() {
     startButton.style.display = 'none';
 
     sortQuestions();
-    console.log(questions);
     displayQuestion();
 }
 
 function sortQuestions() {
-    for (let i = 0; i < MAX_QUIZ_LENGTH; i++) {
+    for (let i = 0; i < data.length; i++) {
+        questions.push(data[i]);
         // TODO: ensure the same questions don't come up
-        questions.push(
-            data[Math.floor(Math.random() * data.length)]
-        );
+        // questions.push(
+        //     data[Math.floor(Math.random() * data.length)]
+        // );
     }
+
+    console.log(questions);
+    questions = shuffleArray(questions).slice(0, MAX_QUIZ_LENGTH);
+    console.log(questions);
+}
+
+function shuffleArray (arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
 }
 
 function displayQuestion() {

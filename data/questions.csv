@@ -11,7 +11,7 @@ Do you prefer being busy or having a lot of free time?,personality,Being busy.,F
 Someone who you vaguely recognize sees you. What do you do?,personality,Make some small talk.,Nope. Nope. Don't feel like saying hi.,Quickly make an excuse and leave.,Regale them with your plan of world domination.,Calm,Quiet,Rash,Quirky
 "Do you want the good news, or the bad news?",personality,Good news.,Bad news.,Just tell me!,,Jolly,Serious,Rash,
 Did you make a New Year's Resolution?,personality,Of course!,Nope.,What are those?,,Jolly,Adamant,Relaxed,
-Can you handle spicy food?,taste,Turn the heat up!,Not at all.,A little spiciness is fine.,,Fire,Ground,Water,
+Can you handle spicy food?,taste,Turn the heat up!,Not at all.,A little spiciness is fine.,,Fire,Grass,Water,
 Do you think lying is sometimes necessary?,personality,Yep.,Never.,,,Bold,Brave,,
 The people at the next table are singing Happy Birthday. What do you do?,personality,Sing along!,"Nothing, really.","Make a wish, for them to stop.",You didn't do 5 years of choir for nothing!,Jolly,Bashful,Sassy,Quirky
 Do you think people today are lazier than they were 50 years ago?,personality,Yes.,No.,Don't care.,,Serious,Relaxed,Docile,
@@ -34,3 +34,11 @@ A crazy masked assassin is chasing you down! What now?,personality,Drop down & p
 You want to reveal you like someone a whole bunch. How do you do it?,personality,Show it by subtly flirting.,Play a prank on them!,State it clearly for all to hear!,Keep it to myself! It's too risky!,Brave,Impish,Naughty,Lonely
 What book are you reading next?,taste,A great classic.,A fantasy.,Something I can learn from!,Don't want to read!,Ghost,Fairy,Psychic,Fighting
 What type of music did you last listen to?,taste,Pop from another country!,Classical music.,Something chill.,A sad song.,Electric,Psychic,Water,Ice
+"If you were to commit the perfect murder, how would you do it?",taste,Slip a little something in their tea.,A knife made with ice.,Fake a workplace accident!,Catch them alone in an isolated place.,Poison,Ice,Psychic,Dark
+Ouch! You got a papercut. How did you react?,taste,Yell 'ouch!',Grumble a little to myself.,Crack a paper-themed joke.,Didn't react at all.,Normal,Fire,Ghost,Rock
+What do you value most in a best friend?,personality,Humor.,Loyalty.,Kindness.,,Jolly,Brave,Modest,
+What 'completes' a good burger for you?,personality,The pickle!,Good 'ol cheese.,My favorite sauces!,I don't like burgers.,Hardy,Mild,Quirky,Quiet
+Do you like to try new things?,personality,Yes.,Every once in a while.,No.,,Bold,Gentle,Timid,
+What would you wish from a genie?,personality,Lots of money!,World peace.,I'd find a way to get more wishes.,Make it rain food!,Sassy,Naive,Bold,Quirky
+Do you have a nervous 'tick'?,personality,Yes. I tend to tap my foot noisily.,Yes. I twirl my hair and touch my nails.,No. I'm an internal processor.,No. I don't get nervous.,Rash,Bashful,Careful,Calm
+Do you like collecting things?,taste,Yes!,No!,,,Bug,Normal,,

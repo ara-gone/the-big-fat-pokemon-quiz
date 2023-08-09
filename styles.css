@@ -52,7 +52,6 @@ body {
 
 .container {
   position: relative;
-  overflow: hidden;
   width: 450px;
   padding: 20px;
   margin-top: 80px;
