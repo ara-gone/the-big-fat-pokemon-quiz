@@ -32,7 +32,7 @@ body {
   height: 100px;
   width: 100px;
 
-  animation-name: pos;
+  animation-name: l_r;
   animation-duration: 20s;
   animation-iteration-count: infinite;
   animation-play-state: running;
@@ -44,11 +44,17 @@ body {
   opacity: 0.8;
 }
 
-@keyframes pos {
+@keyframes l_r {
     0%   {left: -20%}
     /* 25%   {transform: rotate(0.8turn);} */
     100% {left: 120%}
   }
+
+@keyframes r_l {
+    0%   {left: 120%}
+    /* 25%   {transform: rotate(0.8turn);} */
+    100% {left: -20%}
+}
 
 .container {
   position: relative;

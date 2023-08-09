@@ -211,7 +211,16 @@ loopFunction(20000,
 
         for (let anim of animations) {
             anim.src = url_base + (Math.floor(Math.random() * MAX_DEX_NUMBER) + 1) + ".png";
-            anim.style.top = `${Math.floor(Math.random() * 100)}%`;
+            anim.style.top = `${Math.floor(Math.random() * 60)}%`;
+            anim.style['animation-duration'] = `${Math.floor(Math.random() * 20) + 10}s`;
+
+            x = Math.floor((Math.random() * 2) + 1);
+            if (x == 1) {
+                anim.style['animation-name'] = 'l_r';
+            }
+            else if (x == 2) {
+                anim.style['animation-name'] = 'r_l';
+            }
         }
     });
 
