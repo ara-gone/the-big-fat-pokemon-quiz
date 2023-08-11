@@ -200,7 +200,7 @@ function setup(){
 }
 
 // change this to function that resets image + position on page border hit
-loopFunction(20000, 
+loopFunction(10000, 
     function() {
         
         url_base = "assets/sprites/icons/";
@@ -228,15 +228,15 @@ loopFunction(20000,
             //     }
             // }
             anim.src = url_base + (Math.floor(Math.random() * MAX_DEX_NUMBER) + 1) + ".png";
-            anim.style.top = `${Math.floor(Math.random() * 60)}%`;
-            anim.style['animation-duration'] = `${Math.floor(Math.random() * 20) + 10}s`;
-
+            // anim.style.top = `${Math.floor(Math.random() * 60)}%`;
+            // anim.style['animation-duration'] = `${Math.floor(Math.random() * 20) + 10}s`;
+            
             x = Math.floor((Math.random() * 2) + 1);
             if (x == 1) {
-                anim.style['animation-name'] = 'l_r';
+                anim.style['animation-name'] = 'fade-left-to-right';
             }
             else if (x == 2) {
-                anim.style['animation-name'] = 'r_l';
+                anim.style['animation-name'] = 'fade-right-to-left';
             }
         }
     });
