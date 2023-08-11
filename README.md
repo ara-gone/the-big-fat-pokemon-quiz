@@ -1,5 +1,13 @@
 # The Big Fat Pokemon Personality Quiz (of All Time)
 ## About
+## Credits
+
+### jquery-csv by *evanplaice*
+see here! https://github.com/evanplaice/jquery-csv
+
+### sprites & other graphics
+- PokeAPI: https://github.com/PokeAPI/sprites
+
 <!-- 
 An attempt to create a Pokémon personality quiz that is inclusive of *all*... \*checks Bulbapedia\*... **1000+** 'mons across the series, also throwing in regional variants and unique forms.
 

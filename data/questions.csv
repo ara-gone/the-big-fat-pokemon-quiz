@@ -1,4 +1,4 @@
-question,question_type,answer_1,answer_2,answer_3,answer_4,result_1,result_2,result_3,result_4
+﻿question,question_type,answer_1,answer_2,answer_3,answer_4,result_1,result_2,result_3,result_4
 You decide to go on a road trip. Where are you headed?,personality,"A golden, sunny beach!","The big, glamorous city.",I'm fine staying at home...,,Jolly,Sassy,Modest,
 What's in your pockets right now?,personality,Nothing!,I don't have pockets?,A used tissue and ...one piece of gum.,"My phone, wallet, earphones, and a pen!",Relaxed,Lax,Hasty,Careful
 "Have you ever thought that if you dug into your backyard, you would find a buried treasure?",personality,Yes.,No.,,,Naive,Serious,,
@@ -40,5 +40,63 @@ What do you value most in a best friend?,personality,Humor.,Loyalty.,Kindness.,,
 What 'completes' a good burger for you?,personality,The pickle!,Good 'ol cheese.,My favorite sauces!,I don't like burgers.,Hardy,Mild,Quirky,Quiet
 Do you like to try new things?,personality,Yes.,Every once in a while.,No.,,Bold,Gentle,Timid,
 What would you wish from a genie?,personality,Lots of money!,World peace.,I'd find a way to get more wishes.,Make it rain food!,Sassy,Naive,Bold,Quirky
-Do you have a nervous 'tick'?,personality,Yes. I tend to tap my foot noisily.,Yes. I twirl my hair and touch my nails.,No. I'm an internal processor.,No. I don't get nervous.,Rash,Bashful,Careful,Calm
+Do you have any nervous habits?,personality,I can't keep my feet still sometimes.,I touch my hair and nails a lot.,I'm an internal processor.,No. I don't get nervous.,Rash,Bashful,Careful,Calm
 Do you like collecting things?,taste,Yes!,No!,,,Bug,Normal,,
+"If you could experience a natural disaster (safely), what would it be?",taste,An earthquake.,A tsunami.,A tornado.,A volcanic eruption.,Ground,Water,Flying,Fire
+You're at the beach. What are you doing first?,taste,Building a sandcastle!,Looking for weird creatures!,Having a nice swim!,Sunbathing!,Ground,Bug,Water,Grass
+Are you afraid of snakes?,taste,I love them!,They're ok.,They're freaky!,,Poison,Dark,Steel,
+Do you believe in reincarnation?,personality,Yes!,No!,,,Gentle,Hardy,,
+Do you enjoy playing pranks?,personality,They're the best!,Not really.,I like watching them happen.,How could you do that to somebody else?,Naughty,Calm,Naive,Timid
+Are you scared of the dark?,taste,Yes.,No.,,,Bug,Dark,,
+What superpower would you like to have?,taste,The power of flight.,Super-strength!,The ability to read minds.,Teleportation!,Flying,Fighting,Psychic,Electric
+Do you have a lot of secrets?,taste,Yes. ,No.,,,Dark,Normal,,
+Do you agree that 'offense is the best defense'?,taste,Totally!,Defense is the best.,Please don't fight!,,Fighting,Rock,Fairy,
+Are you a materialistic person?,personality,Yes.,No.,,,Sassy,Modest,,
+What does your dream job look like?,personality,Being able to help people!,I'm financially comfortable there.,Something new and exciting everyday!,A job that doesn't feel like work.,Brave,Docile,Naive,Lax
+You find a lost wallet with $100 at a train station. There's no identification. What are you going to do?,personality,Turn it into lost & found.,Give the money to someone who needs it.,Keep it and try to find the owner online.,Haha! I'm rich!,Mild,Naive,Modest,Naughty
+"Your friends are arguing over text, in a very public groupchat. What do you do?",personality,Tell them to take it somewhere else!,Try to resolve the situation neutrally.,Write furiously. This is my fight too!,Do nothing (or maybe get popcorn).,Serious,Careful,Bold,Mild
+Do you enjoy public speaking?,personality,Yes!,No!,Not really - but I can do it when I have to.,,Jolly,Bashful,Docile,
+What is your favorite season?,taste,Spring.,Autumn.,Winter.,Summer.,Grass,Ghost,Ice,Water
+Are you into learning about history?,taste,I love it!,From time to time.,Not really.,,Rock,Psychic,Electric,
+"If you could leave it all and go wherever you wanted, what would you do?",taste,Go as far away into nature as possible.,Go find myself in another country.,Visit family I haven't seen in some time.,Wander aimlessly. Doesn't matter where.,Dragon,Flying,Bug,Ghost
+Do you wish fairytales were real?,taste,Yes!,No!,Sometimes.,A long time ago.,Dragon,Steel,Normal,Poison
+What's your personal aesthetic?,taste,Cute!,Cool!,Somewhere in-between!,Don't care!,Fairy,Dragon,Water,Fighting
+How would you like your body to be treated after death?,taste,"Buried, safe and sound.",Donated to science!,Scatter my ashes to the wind.,I'm an immortal! Muahahaha!,Ground,Steel,Flying,Ghost
+Are you a clumsy person?,taste,Not at all!,Yes! It's really bad!,Not really.,,Ground,Fairy,Rock,
+What did you do the last time you saw a spider?,personality,Scooped and put it outside.,AIEEEEEEEE!!! Someone get it!,Attack it with the nearest thing I have.,Just let it be.,Gentle,Timid,Rash,Lax
+Do you think before you speak?,personality,Yes.,No.,,,Hardy,Relaxed,,
+Have you ever realized you were hogging a conversation?,personality,Oops! Pretty often!,When I'm really passionate.,No. I don't think?,Never.,Rash,Lonely,Quiet,Docile
+"When you see a switch, do you have an overwhelming urge to flip it?",personality,Yes!,Nope!,,,Hasty,Calm,,
+Is it important to always aim to be the best?,personality,It's my way of life!,Nope!,That's toxic!,I try my best!,Lonely,Calm,Bashful,Adamant
+Do you want to be famous?,personality,Yes!,No!,,,Sassy,Docile,,
+How often do you tell jokes?,personality,All the time!,I joke around a little.,Not often.,Never.,Naughty,Impish,Modest,Mild
+Do you like karaoke?,personality,Yes.,No.,,,Jolly,Timid,,
+Do you like cooking?,personality,Yes!,No!,,,Hardy,Lax,,
+"Have you ever accidentally called a teacher ""Mom"" or ""Dad""?",personality,Yep!,Nope!,,,Rash,Quiet,,
+You're eating at a very fancy restaurant known for its food. Which course do you select?,personality,Seared steak.,Healthy fish.,Vegetarian option.,Anything! It's all good!,Impish,Hardy,Bashful,Bold
+"Everyone's sharing a dessert, and there's an extra piece. What do you do?",personality,Don't say anything.,Let everyone know.,First come - first served!,,Adamant,Gentle,Naughty,
+Hey look! There's someone behind you! So… did you look just now?,personality,You scared me!,Ok. You tricked me...,No way. I didn't fall for it.,Huh?! What?,Timid,Hasty,Lonely,Lax
+How are your mornings?,personality,Always in a rush!,I use a routine.,Well... They happen.,Horrible!,Naughty,Quiet,Mild,Sassy
+You're in a completely silent place when someone passes gas! What do you do?,personality,Roll around laughing!,Just ignore it...,Find out who it was!,Shoot a menacing glare.,Naive,Docile,Impish,Sassy
+You've been asked to do a difficult task. What will you do?,personality,Do it myself.,Ask for help.,Make someone else do it!,,Lonely,Adamant,Bold,
+The phone's ringing! What do you do?,personality,Answer right away!,Wait a bit - who is it?,Ignore it...,,Hasty,Gentle,Timid,
+You've just won the lottery! You...,personality,Celebrate! Book some flights!,Call someone close and tell them!,Ugh. It's time to strategize...,,Naive,Gentle,Serious,
+"Your friend suddenly won't listen to you, when everything was fine yesterday. What do you think?",personality,Did I do something wrong?,Whatever. They'll tell me when they want to.,I think I know what's wrong (again)...,,Naive,Lax,Hardy,
+You're daydreaming… when your friend sprays you with water! What now?,personality,Hey! What the heck?!,Aww...,Woo-hoo! Water fiht!,Water fight!,Hasty,Lonely,Naughty,
+You see a big and comfortable bed. Your first reaction is to…,personality,Test it with your hands.,Belly flop!,Curl up...,Jump up and down!,Careful,Impish,Lonely,Naughty
+How's your skill with technology?,taste,I'm really good!,I know enough to get by.,Not the best!,Awful!,Steel,Electric,Fighting,Dragon
+What do you think of graffiti?,taste,I love it!,It's ok.,I hate it!,,Poison,Fairy,Ground,
+How do you make friends with people?,personality,Walk up to them and say hi!,Wait for them to say hi.,It takes a while for me to get close to anyone.,They're usually the friends of my friends!,Jolly,Bashful,Lonely,Sassy
+You've lost your wallet! What will you do?,personality,Calm down and retrace my steps.,Tear the place apart frantically!,Ask someone else to help!,Give up.,Calm,Hasty,Mild,Lax
+Halfway to a job interview you realize you forgot something. You'll be late if you turn back!,personality,Hurry back to get it! I can improvise an excuse!,I can't be bothered to get it now.,Being punctual is the most important thing!,,Brave,Relaxed,Serious,
+"Your food is before anyone else, but you're starving. Do you wait for everyone else to eat?",personality,I'll still wait for everyone's food.,Explain your situation - then eat!,It's chowtime!,,Quiet,Modest,Rash,
+It's a cake! What kind of cake did you imagine?,taste,The sweetest strawberry shortcake.,"Rich, creamy cheesecake.",An elegant and mature black-forest gateau.,A birthday cake!,Fairy,Grass,Dark,Electric
+How do you act in a museum?,personality,I take my time to examine everything and think.,Look for the funniest thing there!,Glance at everything. Then leave.,Waiting at the café for my friends to finally leave.,Gentle,Quirky,Hasty,Hardy
+Do you go to sleep on time?,taste,Time? What time?,"I try, but I don't fall asleep quickly.","Out of exhaustion, yes.",Yep! It's no problem!,Dark,Fire,Electric,Rock
+Do you like cold weather?,taste,Yes!,No!,,,Ice,Fire,,
+Do you have a strong sense of focus?,taste,Yes.,No.,,,Psychic,Bug,,
+Do you believe in life after death?,taste,Absolutely!,Not at all.,Maybe?,,Ghost,Poison,Fairy,
+How do you treat someone who has wronged you badly?,taste,I don't talk to them. Simple as that.,I forgive and forget.,I don't know...,I stay friendly - but am cautious.,Ice,Grass,Fairy,Rock
+Do you enjoy gardening?,taste,Yes!,No!,,,Grass,Fire,,
+Are you a martial artist?,taste,I am!,I'm not - but I think it's cool!,Nope!,,Fighting,Normal,Psychic,
+Do you enjoy swimming?,taste,Yes!,No!,,,Water,Ground,,
