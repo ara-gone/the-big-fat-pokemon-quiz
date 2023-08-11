@@ -16,7 +16,8 @@ let dexCounter = 0; // for chronological ordering of pokemon
 let questions = [];
 let currentQuestion = 0;
 
-let data = null;
+let questions_csv = null;
+
 let userScore = {
     Hardy:0,
     Lonely:0,
@@ -90,17 +91,11 @@ function setupQuiz() {
 }
 
 function sortQuestions() {
-    for (let i = 0; i < data.length; i++) {
-        questions.push(data[i]);
-        // TODO: ensure the same questions don't come up
-        // questions.push(
-        //     data[Math.floor(Math.random() * data.length)]
-        // );
+    for (let i = 0; i < questions_csv.length; i++) {
+        questions.push(questions_csv[i]);
     }
 
-    console.log(questions);
     questions = shuffleArray(questions).slice(0, MAX_QUIZ_LENGTH);
-    console.log(questions);
 }
 
 function shuffleArray (arr) {
@@ -184,19 +179,15 @@ function loopFunction(delay, callback){
 };
 
 function setup(){
-    // TODO: create multiple flying mons?
-    let img = document.createElement('img');
-    img.src = 'assets/sprites/icons/1.png';
-    img.class = 'sprites';
-    img.style.top = "60%";
-    // document.getElementById('body').appendChild(img);
-
-    // (Math.floor(Math.random() * 10) + 1)
-
     $.get("data/questions.csv", function(questions) {
-         data = $.csv.toObjects(questions);
-         console.log(data);
+         questions_csv = $.csv.toObjects(questions);
+         console.log(questions_csv);
     });
+
+//     $.get("data/pokemon.csv", function(questions) {
+//         questions_csv = $.csv.toObjects(questions);
+//         console.log(questions_csv);
+//    });
 }
 
 // change this to function that resets image + position on page border hit
