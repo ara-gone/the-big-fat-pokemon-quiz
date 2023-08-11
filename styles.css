@@ -33,7 +33,7 @@ body {
   width: 100px;
 
   animation-name: fade-right-to-left;
-  animation-duration: 10s;
+  animation-duration: 20s;
   animation-iteration-count: infinite;
   animation-play-state: running;
   overflow: hidden;

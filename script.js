@@ -200,7 +200,7 @@ function setup(){
 }
 
 // change this to function that resets image + position on page border hit
-loopFunction(10000, 
+loopFunction(20000, 
     function() {
         
         url_base = "assets/sprites/icons/";
@@ -234,9 +234,11 @@ loopFunction(10000,
             x = Math.floor((Math.random() * 2) + 1);
             if (x == 1) {
                 anim.style['animation-name'] = 'fade-left-to-right';
+                anim.style.left -= Math.floor(Math.random() * 20);
             }
             else if (x == 2) {
                 anim.style['animation-name'] = 'fade-right-to-left';
+                anim.style.right -= Math.floor(Math.random() * 20);
             }
         }
     });
