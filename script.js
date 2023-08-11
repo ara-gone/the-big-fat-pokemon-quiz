@@ -1,6 +1,6 @@
 const MAX_DEX_NUMBER = 898;
 const MAX_QUESTION_OPTIONS = 4;
-const MAX_QUIZ_LENGTH = 20;
+const MAX_QUIZ_LENGTH = 5;
 
 const quizContainer = document.getElementById('quiz');
 const animationContainer = document.getElementById('animation');
@@ -13,10 +13,12 @@ let screenWidth = $(window).width();
 
 let dexCounter = 0; // for chronological ordering of pokemon
 
-let questions = [];
-let currentQuestion = 0;
-
 let questions_csv = null;
+let questions = [];
+let poke_csv = null;
+let poke_data = [];
+
+let currentQuestion = 0;
 
 let userScore = {
     Hardy:0,
@@ -54,12 +56,24 @@ startButton.addEventListener('click', setupQuiz);
 submitButton.addEventListener('click', submitAnswer);
 
 function showResult() {
+    let personality_result = 'Serious';
+    let best_personality_score = 0;
+
+    for (var key in userScore) {
+        if (userScore.hasOwnProperty(key)) {
+            if (userScore[key] >= best_personality_score) {
+                personality_result = key;
+            }
+        }
+    }
+
     quizContainer.innerHTML = '';
     submitButton.style.display = 'none';
     const div = document.createElement("div");
     div.style.width = "100px";
     div.style.height = "100px";
-    div.innerHTML = JSON.stringify(userScore);
+    div.innerHTML = 'You are... the ' + personality_result + ' type.';
+    // div.innerHTML = JSON.stringify(userScore);
     quizContainer.appendChild(div);
 }
 
@@ -184,10 +198,10 @@ function setup(){
          console.log(questions_csv);
     });
 
-//     $.get("data/pokemon.csv", function(questions) {
-//         questions_csv = $.csv.toObjects(questions);
-//         console.log(questions_csv);
-//    });
+    $.get("data/pokemon.csv", function(questions) {
+        poke_csv = $.csv.toObjects(questions);
+        console.log(poke_csv);
+   });
 }
 
 // change this to function that resets image + position on page border hit
