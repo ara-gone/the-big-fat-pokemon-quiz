@@ -1,6 +1,6 @@
 const MAX_DEX_NUMBER = 898;
 const MAX_QUESTION_OPTIONS = 4;
-const MAX_QUIZ_LENGTH = 5;
+const MAX_QUIZ_LENGTH = 25;
 
 const quizContainer = document.getElementById('quiz');
 const animationContainer = document.getElementById('animation');
@@ -63,23 +63,64 @@ function showResult() {
     let personality_result = 'Serious';
     let best_personality_score = 0;
 
+    // determine the user's personality type by score
     console.log(personaScore);
     for (var key in personaScore) {
         if (personaScore.hasOwnProperty(key)) {
-            console.log(key);
             if (personaScore[key] > best_personality_score) {
+                console.log(personaScore[key])
+
+                best_personality_score = personaScore[key];
                 personality_result = key;
             }
         }
     }
 
+    // determine the user's preferred pokemon type[s]
+
+    let typing_1 = 'Normal'; // set defaults
+    t1_score = 0;
+    let typing_2 = 'Fire';
+    t2_score = 0;
+
+    console.log(typeScore); 
+    for (var key in typeScore) {
+        if (typeScore.hasOwnProperty(key)) {
+            if (typeScore[key] > t1_score) {
+                // knock down the currently preferred type by a rank
+                t2_score = t1_score;
+                typing_2 = typing_1;
+
+                // then update first preference type
+                t1_score = typeScore[key];
+                typing_1 = key; 
+            }
+            else if (typeScore[key] > t2_score) {
+                // replace second preference
+                t2_score = typeScore[key];
+                typing_2 = key;
+            }
+        }
+    }
+
+    console.log(typing_1);
+    console.log(typing_2);
+
     for (let i = 0; i < poke_csv.length; i++) {
-        if (poke_csv[i].Personality === personality_result) {
+        if (poke_csv[i].Personality == personality_result && 
+            (poke_csv[i].Type1 == typing_1 
+            || poke_csv[i].Type2 == typing_1
+            || poke_csv[i].Type1 == typing_2
+            || poke_csv[i].Type2 == typing_2)
+            ) {
             poke_data.push(poke_csv[i]);
         }
     }
 
+    console.log(poke_data);
+
     let pokemon_result = poke_data[Math.floor(Math.random() * poke_data.length)];
+    console.log(pokemon_result);
 
     quizContainer.innerHTML = '';
     submitButton.style.display = 'none';
@@ -131,6 +172,7 @@ function sortQuestions() {
     }
 
     questions = shuffleArray(questions).slice(0, MAX_QUIZ_LENGTH);
+    console.log(questions);
 }
 
 function shuffleArray (arr) {
@@ -253,7 +295,7 @@ loopFunction(12000,
             //         anim.style['animation-name'] = 'r_l';
             //     }
             // }
-            
+
             anim.src = url_base + (Math.floor(Math.random() * MAX_DEX_NUMBER) + 1) + ".png";
             // anim.style.top = `${Math.floor(Math.random() * 60)}%`;
             // anim.style['animation-duration'] = `${Math.floor(Math.random() * 20) + 10}s`;
