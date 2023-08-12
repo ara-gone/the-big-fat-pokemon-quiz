@@ -1,6 +1,6 @@
 const MAX_DEX_NUMBER = 898;
 const MAX_QUESTION_OPTIONS = 4;
-const MAX_QUIZ_LENGTH = 1;
+const MAX_QUIZ_LENGTH = 30;
 
 const quizContainer = document.getElementById('quiz');
 const animationContainer = document.getElementById('animation');
