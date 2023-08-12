@@ -20,7 +20,7 @@ let poke_data = [];
 
 let currentQuestion = 0;
 
-let userScore = {
+let personaScore = {
     Hardy:0,
     Lonely:0,
     Adamant:0,
@@ -45,7 +45,10 @@ let userScore = {
     Hasty:0,
     Jolly:0,
     Naive:0,
-    Serious:0,
+    Serious:0
+};
+
+let typeScore = {
     Bug:0,Dark:0,Dragon:0,Electric:0,Fairy:0,Fighting:0,
     Fire:0,Flying:0,Ghost:0,Grass:0,Ground:0,Ice:0,
     Normal:0,Poison:0,Psychic:0,Rock:0,Steel:0,Water:0
@@ -56,23 +59,34 @@ startButton.addEventListener('click', setupQuiz);
 submitButton.addEventListener('click', submitAnswer);
 
 function showResult() {
+
     let personality_result = 'Serious';
     let best_personality_score = 0;
 
-    for (var key in userScore) {
-        if (userScore.hasOwnProperty(key)) {
-            if (userScore[key] >= best_personality_score) {
+    console.log(personaScore);
+    for (var key in personaScore) {
+        if (personaScore.hasOwnProperty(key)) {
+            console.log(key);
+            if (personaScore[key] > best_personality_score) {
                 personality_result = key;
             }
         }
     }
+
+    for (let i = 0; i < poke_csv.length; i++) {
+        if (poke_csv[i].Personality === personality_result) {
+            poke_data.push(poke_csv[i]);
+        }
+    }
+
+    let pokemon_result = poke_data[Math.floor(Math.random() * poke_data.length)];
 
     quizContainer.innerHTML = '';
     submitButton.style.display = 'none';
     const div = document.createElement("div");
     div.style.width = "100px";
     div.style.height = "100px";
-    div.innerHTML = 'You are... the ' + personality_result + ' type.';
+    div.innerHTML = 'You are... the ' + personality_result + ' type. \nYou must be a ' + pokemon_result.Name;
     // div.innerHTML = JSON.stringify(userScore);
     quizContainer.appendChild(div);
 }
@@ -83,7 +97,14 @@ function submitAnswer() {
 
     if (selectedOption) {
         const result = selectedOption.value;
-        userScore[result]++;
+        console.log(result);
+        if (personaScore.hasOwnProperty(result)) {
+            personaScore[result]++;
+        }
+        else if (typeScore.hasOwnProperty(result)) {
+            typeScore[result]++;
+        }
+        // userScore[result]++;
         currentQuestion++;
 
         if (currentQuestion < questions.length) {
@@ -205,7 +226,7 @@ function setup(){
 }
 
 // change this to function that resets image + position on page border hit
-loopFunction(20000, 
+loopFunction(12000, 
     function() {
         
         url_base = "assets/sprites/icons/";
@@ -232,6 +253,7 @@ loopFunction(20000,
             //         anim.style['animation-name'] = 'r_l';
             //     }
             // }
+            
             anim.src = url_base + (Math.floor(Math.random() * MAX_DEX_NUMBER) + 1) + ".png";
             // anim.style.top = `${Math.floor(Math.random() * 60)}%`;
             // anim.style['animation-duration'] = `${Math.floor(Math.random() * 20) + 10}s`;
