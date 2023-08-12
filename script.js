@@ -1,6 +1,6 @@
 const MAX_DEX_NUMBER = 898;
 const MAX_QUESTION_OPTIONS = 4;
-const MAX_QUIZ_LENGTH = 25;
+const MAX_QUIZ_LENGTH = 1;
 
 const quizContainer = document.getElementById('quiz');
 const animationContainer = document.getElementById('animation');
@@ -80,7 +80,7 @@ function showResult() {
 
     let typing_1 = 'Normal'; // set defaults
     t1_score = 0;
-    let typing_2 = 'Fire';
+    let typing_2 = 'Normal';
     t2_score = 0;
 
     console.log(typeScore); 
@@ -118,19 +118,53 @@ function showResult() {
     }
 
     console.log(poke_data);
+    pokemon_result = null
+    if (poke_data.length == 0) {
+        console.log('no pokemon result available!');
+        pokemon_result = poke_csv[Math.floor(Math.random() * poke_csv.length)];
+    }
+    else {
+        pokemon_result = poke_data[Math.floor(Math.random() * poke_data.length)];
+    }
 
-    let pokemon_result = poke_data[Math.floor(Math.random() * poke_data.length)];
     console.log(pokemon_result);
+    fetchPokeData(pokemon_result.Name);
 
     quizContainer.innerHTML = '';
     submitButton.style.display = 'none';
     const div = document.createElement("div");
-    div.style.width = "100px";
+    div.style.width = "500px";
     div.style.height = "100px";
-    div.innerHTML = 'You are... the ' + personality_result + ' type. \nYou must be a ' + pokemon_result.Name;
+    div.innerHTML = 'You are... the ' + personality_result + ' type. \nYou must be... a ' + pokemon_result.Name + '!';
     // div.innerHTML = JSON.stringify(userScore);
+
+    const pokemonImage = document.getElementById('result');
+    pokemonImage.style.display = "inline-block";
+
     quizContainer.appendChild(div);
 }
+
+async function fetchPokeData(name) {
+    // assuming capitalized pokemon names...
+    
+    const response = await fetch("https://pokeapi.co/api/v2/pokemon/" + name.toLowerCase());
+    const pokemon = await response.json();
+    console.log(pokemon);
+    console.log(pokemon.sprites.other['official-artwork'].front_default);
+
+    // const div = document.createElement("div");
+    // div.style.width = "100px";
+    // div.style.height = "100px";
+    // div.innerHTML = 'TEST';
+    // quizContainer.appendChild(div);
+
+    var img = document.createElement("img");
+    img.src = pokemon.sprites.other['official-artwork'].front_default;
+    img.className = "artwork";
+    quizContainer.appendChild(img);
+
+    return pokemon.sprites.other['official-artwork'].front_default;
+  }
 
 function submitAnswer() {
     const selectedOption = document.querySelector('input[name="quiz"]:checked');

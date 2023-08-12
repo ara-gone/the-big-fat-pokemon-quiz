@@ -20,6 +20,14 @@ body {
   opacity: 0.7;
 }
 
+.artwork {
+  position: relative;
+
+  height: 200px;
+  width: 200px;
+  padding: 10px;
+}
+
 /* .sprites:hover {
   opacity: 1.5;
 } */
