@@ -270,6 +270,12 @@ function displayQuestion() {
     }
     
     quizContainer.innerHTML = '';
+
+    const div = document.createElement("div");
+    div.style.width = "500px";
+    div.style.height = "20px";
+    div.innerHTML = (currentQuestion+1) + "/" + MAX_QUIZ_LENGTH;
+    quizContainer.appendChild(div);
     quizContainer.appendChild(questionElement);
     quizContainer.appendChild(optionsElement);
 

@@ -13,7 +13,7 @@ body {
   width: 200px;
 
   animation-name: fade-right-to-left;
-  animation-duration: 12s;
+  animation-duration: 13s;
   animation-iteration-count: infinite;
   animation-play-state: running;
   overflow: hidden;
