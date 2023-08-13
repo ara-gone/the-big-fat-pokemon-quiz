@@ -312,7 +312,8 @@ loopFunction(12000,
         }
 
         animations = document.getElementsByClassName("sprites");
-
+        
+        let x = 1;
         for (let anim of animations) {
             right_edge = anim.clientWidth + anim.leftOffset;
 
@@ -334,12 +335,13 @@ loopFunction(12000,
             // anim.style.top = `${Math.floor(Math.random() * 60)}%`;
             // anim.style['animation-duration'] = `${Math.floor(Math.random() * 20) + 10}s`;
             
-            x = Math.floor((Math.random() * 2) + 1);
-            if (x == 1) {
+            // x = Math.floor((Math.random() * 2) + 1);
+            x *= -1;
+            if (x == -1) {
                 anim.style['animation-name'] = 'fade-left-to-right';
                 anim.style.left -= Math.floor(Math.random() * 20);
             }
-            else if (x == 2) {
+            else if (x == 1) {
                 anim.style['animation-name'] = 'fade-right-to-left';
                 anim.style.right -= Math.floor(Math.random() * 20);
             }

@@ -9,8 +9,8 @@ body {
 .sprites {
   position: absolute;
 
-  height: 100px;
-  width: 100px;
+  height: 200px;
+  width: 200px;
 
   animation-name: fade-right-to-left;
   animation-duration: 12s;
@@ -34,7 +34,7 @@ body {
 
 @keyframes fade-left-to-right {
   0% {left: 0%; opacity: 0;}
-  20% {opacity: 1;}
+  10% {opacity: 1;}
   33% {opacity: 1;}
   53% {opacity: 0;}
   100% {left: 100%; opacity: 0;}
@@ -42,7 +42,7 @@ body {
 
 @keyframes fade-right-to-left {
   0% {right: 0%; opacity: 0;}
-  20% {opacity: 1;}
+  10% {opacity: 1;}
   33% {opacity: 1;}
   53% {opacity: 0;}
   100% {right: 100%; opacity: 0;}
@@ -50,9 +50,9 @@ body {
 
 .container {
   position: relative;
-  width: 450px;
+  width: 80%;
   padding: 20px;
-  margin-top: 80px;
+  margin-top: 30%;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
