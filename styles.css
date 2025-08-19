@@ -8,12 +8,12 @@ body {
 }
 
 .sprites {
-  position: relative;
-
-  height: 250px;
-  width: 250px;
-
-  bottom: 50%;
+  position: absolute; /* Change to absolute for positioning */
+  height: 10vw; /* Use viewport width for responsive height */
+  width: 10vw;  /* Use viewport width for responsive width */
+  
+  top: calc(50% - 400px); /* Position above the container */
+  /* Alternatively, use bottom: calc(50% + 30px); to position below the container */
 
   animation-name: float;
   animation-duration: 3s;
@@ -21,6 +21,14 @@ body {
   animation-play-state: running;
   overflow: hidden;
   opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  .sprites {
+    height: 20vw; /* Adjust height for smaller screens */
+    width: 20vw;  /* Adjust width for smaller screens */
+    top: calc(50% - 80vw); /* Adjust position for smaller screens */
+  }
 }
 
 .artwork {
@@ -67,7 +75,7 @@ body {
 
 .container {
   position: absolute;
-  top: 400px;
+  top: 50%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
