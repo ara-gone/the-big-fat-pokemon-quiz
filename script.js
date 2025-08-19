@@ -54,6 +54,8 @@ let typeScore = {
     Normal:0,Poison:0,Psychic:0,Rock:0,Steel:0,Water:0
 };
 
+let sprite_list = []
+
 // resetButton.addEventListener('click', resetPage);
 startButton.addEventListener('click', setupQuiz);
 submitButton.addEventListener('click', submitAnswer);
@@ -308,9 +310,8 @@ function setup(){
 }
 
 // change this to function that resets image + position on page border hit
-loopFunction(12000, 
+loopFunction(5000, 
     function() {
-        
         url_base = "assets/sprites/icons/";
         dexCounter++;
         if (dexCounter >= 1000) {
@@ -321,7 +322,7 @@ loopFunction(12000,
         
         let x = 1;
         for (let anim of animations) {
-            right_edge = anim.clientWidth + anim.leftOffset;
+            // right_edge = anim.clientWidth + anim.leftOffset;
 
             // if (right_edge-screenWidth > anim.clientWidth * 1.2) {
             //     anim.src = url_base + (Math.floor(Math.random() * MAX_DEX_NUMBER) + 1) + ".png";
@@ -342,15 +343,15 @@ loopFunction(12000,
             // anim.style['animation-duration'] = `${Math.floor(Math.random() * 20) + 10}s`;
             
             // x = Math.floor((Math.random() * 2) + 1);
-            x *= -1;
-            if (x == -1) {
-                anim.style['animation-name'] = 'fade-left-to-right';
-                anim.style.left -= Math.floor(Math.random() * 20);
-            }
-            else if (x == 1) {
-                anim.style['animation-name'] = 'fade-right-to-left';
-                anim.style.right -= Math.floor(Math.random() * 20);
-            }
+            // x *= -1;
+            // if (x == -1) {
+            //     anim.style['animation-name'] = 'fade-left-to-right';
+            //     anim.style.left -= Math.floor(Math.random() * 20);
+            // }
+            // else if (x == 1) {
+            //     anim.style['animation-name'] = 'fade-right-to-left';
+            //     anim.style.right -= Math.floor(Math.random() * 20);
+            // }
         }
     });
 

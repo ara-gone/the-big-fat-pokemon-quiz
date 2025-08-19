@@ -1,4 +1,5 @@
 body {
+  font-size: 20px;
   font-family: sans-serif;
   background: #f8f0f0;
   display: flex;
@@ -7,17 +8,19 @@ body {
 }
 
 .sprites {
-  position: absolute;
+  position: relative;
 
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
 
-  animation-name: fade-right-to-left;
-  animation-duration: 12s;
+  bottom: 50%;
+
+  animation-name: float;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-play-state: running;
   overflow: hidden;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .artwork {
@@ -48,17 +51,36 @@ body {
   100% {right: 100%; opacity: 0;}
 }
 
+@keyframes float {
+  0% {
+      transform: translateY(0);
+  }
+
+  50% {
+      transform: translateY(-8%);
+  }
+
+  100% {
+      transform: translateY(0);
+  }
+}
+
 .container {
-  position: relative;
-  width: 80%;
-  padding: 20px;
-  margin-top: 30%;
+  position: absolute;
+  top: 400px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+
+  padding: 30px;
+  width: 60%;
+
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
 }
 
-h1 {
+h1, h2 {
   text-align: center;
 }
 
@@ -85,7 +107,7 @@ h1 {
   color: #000000;
   border: outset;
   cursor: url(assets/sprites/Poké_Ball_summary_IV.png), auto;
-  font-size: 16px;
+  font-size: 20px;
   border-radius: px;
   transition: background-color 0.3s;
   justify-content: center;
@@ -99,7 +121,7 @@ h1 {
   background-color: none;
   color: #000000;
   border: outset;
-  font-size: 16px;
+  font-size: 20px;
   border-radius: px;
   transition: background-color 0.3s;
   justify-content: center;
@@ -121,6 +143,7 @@ h1 {
 }
 
 .option {
+  font-size: 20px;
   display: block;
   margin-bottom: 10px;
 }
