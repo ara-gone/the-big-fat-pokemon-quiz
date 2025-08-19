@@ -310,48 +310,24 @@ function setup(){
 }
 
 // change this to function that resets image + position on page border hit
-loopFunction(5000, 
+loopFunction(3000, 
     function() {
         url_base = "assets/sprites/icons/";
-        dexCounter++;
-        if (dexCounter >= 1000) {
-            dexCounter = 0; // unused atm
+        if (screenWidth < 600) {
+            url_base = "assets/sprites/icons/small/";
         }
+        else if (screenWidth < 800) {
+            url_base = "assets/sprites/icons/medium/";
+        }
+
+
 
         animations = document.getElementsByClassName("sprites");
         
-        let x = 1;
         for (let anim of animations) {
-            // right_edge = anim.clientWidth + anim.leftOffset;
-
-            // if (right_edge-screenWidth > anim.clientWidth * 1.2) {
-            //     anim.src = url_base + (Math.floor(Math.random() * MAX_DEX_NUMBER) + 1) + ".png";
-            //     anim.style.top = `${Math.floor(Math.random() * 60)}%`;
-            //     anim.style['animation-duration'] = `${Math.floor(Math.random() * 20) + 10}s`;
-
-            //     x = Math.floor((Math.random() * 2) + 1);
-            //     if (x == 1) {
-            //         anim.style['animation-name'] = 'l_r';
-            //     }
-            //     else if (x == 2) {
-            //         anim.style['animation-name'] = 'r_l';
-            //     }
-            // }
 
             anim.src = url_base + (Math.floor(Math.random() * MAX_DEX_NUMBER) + 1) + ".png";
-            // anim.style.top = `${Math.floor(Math.random() * 60)}%`;
-            // anim.style['animation-duration'] = `${Math.floor(Math.random() * 20) + 10}s`;
-            
-            // x = Math.floor((Math.random() * 2) + 1);
-            // x *= -1;
-            // if (x == -1) {
-            //     anim.style['animation-name'] = 'fade-left-to-right';
-            //     anim.style.left -= Math.floor(Math.random() * 20);
-            // }
-            // else if (x == 1) {
-            //     anim.style['animation-name'] = 'fade-right-to-left';
-            //     anim.style.right -= Math.floor(Math.random() * 20);
-            // }
+
         }
     });
 

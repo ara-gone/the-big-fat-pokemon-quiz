@@ -8,19 +8,35 @@ body {
 }
 
 .sprites {
-  position: absolute; /* Change to absolute for positioning */
+  position: absolute;
   height: 10vw; /* Use viewport width for responsive height */
   width: 10vw;  /* Use viewport width for responsive width */
   
   top: calc(50% - 400px); /* Position above the container */
-  /* Alternatively, use bottom: calc(50% + 30px); to position below the container */
 
-  animation-name: float;
+  animation-name: float-fade;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-play-state: running;
   overflow: hidden;
   opacity: 0.8;
+}
+
+@keyframes float-fade {
+  0% {
+      transform: translateY(0);
+      opacity: 0;
+  }
+
+  50% {
+      transform: translateY(-8%);
+      opacity: 0.8;
+  }
+
+  100% {
+      transform: translateY(0);
+      opacity: 0;
+  }
 }
 
 @media (max-width: 600px) {
