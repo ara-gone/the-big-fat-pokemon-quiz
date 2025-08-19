@@ -20,6 +20,23 @@ body {
   animation-play-state: running;
   overflow: hidden;
   opacity: 0.8;
+  z-index: 1; /* Set z-index for sprites */
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  
+  padding: 30px;
+  width: 60%;
+  
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  z-index: 2; /* Set a higher z-index for the container */
 }
 
 @keyframes float-fade {

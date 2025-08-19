@@ -1,6 +1,7 @@
 const MAX_DEX_NUMBER = 898;
 const MAX_QUESTION_OPTIONS = 4;
-const MAX_QUIZ_LENGTH = 15;
+const MAX_QUIZ_LENGTH = 10;
+const MAX_NUMBER_DISPLAYED_SPRITES = 20;
 
 const quizContainer = document.getElementById('quiz');
 const animationContainer = document.getElementById('animation');
@@ -298,6 +299,17 @@ function loopFunction(delay, callback){
 };
 
 function setup(){
+    const initial_sprite = document.getElementById("initial");
+
+    for (i = 0; i < MAX_NUMBER_DISPLAYED_SPRITES; i++) {
+        const cloned_sprite = initial_sprite.cloneNode(true);
+
+        cloned_sprite.id = "clone";
+        sprite_list.push(cloned_sprite);
+    
+        document.body.appendChild(cloned_sprite);
+    }
+
     $.get("data/questions.csv", function(questions) {
          questions_csv = $.csv.toObjects(questions);
          console.log(questions_csv);
@@ -313,21 +325,14 @@ function setup(){
 loopFunction(3000, 
     function() {
         url_base = "assets/sprites/icons/";
-        if (screenWidth < 600) {
-            url_base = "assets/sprites/icons/small/";
-        }
-        else if (screenWidth < 800) {
-            url_base = "assets/sprites/icons/medium/";
-        }
-
-
-
         animations = document.getElementsByClassName("sprites");
         
         for (let anim of animations) {
-
             anim.src = url_base + (Math.floor(Math.random() * MAX_DEX_NUMBER) + 1) + ".png";
-
+            if (anim.id == "clone") {
+                anim.style.left = (Math.random() * screenWidth) + "px";
+                anim.style.top = (Math.random() * screenWidth) + "px";
+            }
         }
     });
 
